@@ -32,8 +32,12 @@ class SkillResult:
 # ── GitHub repo metadata fetcher ──────────────────────────────────────────────
 
 def _fetch_github_repo(owner: str, repo: str) -> dict:
+    import os
     url = f"https://api.github.com/repos/{owner}/{repo}"
-    req = urllib.request.Request(url, headers={"User-Agent": "VEGETA-ACP/1.0"})
+    headers = {"User-Agent": "VEGETA-ACP/1.0"}
+    if token := os.getenv("GITHUB_TOKEN"):
+        headers["Authorization"] = f"Bearer {token}"
+    req = urllib.request.Request(url, headers=headers)
     try:
         with urllib.request.urlopen(req, timeout=15) as r:
             data = json.loads(r.read())
