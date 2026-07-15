@@ -1,0 +1,226 @@
+{
+  "resources": [
+    {
+      "name": "get_lerobot_repo",
+      "description": "LeRobot (HuggingFace) repo info — state-of-the-art robot learning models and datasets",
+      "url": "https://api.github.com/repos/huggingface/lerobot",
+      "params": {"type": "object", "required": [], "properties": {}}
+    },
+    {
+      "name": "get_dexnet_repo",
+      "description": "Dex-Net (Berkeley Automation) repo info — robotic grasp planning and GQ-CNN",
+      "url": "https://api.github.com/repos/BerkeleyAutomation/dex-net",
+      "params": {"type": "object", "required": [], "properties": {}}
+    },
+    {
+      "name": "get_nav2_repo",
+      "description": "Nav2 ROS2 navigation stack repo info — autonomous mobile robot navigation",
+      "url": "https://api.github.com/repos/ros-navigation/navigation2",
+      "params": {"type": "object", "required": [], "properties": {}}
+    },
+    {
+      "name": "get_ultralytics_repo",
+      "description": "Ultralytics YOLOv8 repo info — real-time object detection for robot perception",
+      "url": "https://api.github.com/repos/ultralytics/ultralytics",
+      "params": {"type": "object", "required": [], "properties": {}}
+    },
+    {
+      "name": "get_sam_repo",
+      "description": "Segment Anything Model (Meta AI) repo info — universal image segmentation",
+      "url": "https://api.github.com/repos/facebookresearch/segment-anything",
+      "params": {"type": "object", "required": [], "properties": {}}
+    },
+    {
+      "name": "get_diffusion_policy_repo",
+      "description": "Diffusion Policy (Columbia) repo info — visuomotor policy via diffusion models",
+      "url": "https://api.github.com/repos/real-stanford/diffusion_policy",
+      "params": {"type": "object", "required": [], "properties": {}}
+    },
+    {
+      "name": "get_genesis_repo",
+      "description": "Genesis physics simulator repo info — generative world for robot AI training",
+      "url": "https://api.github.com/repos/Genesis-Embodied-AI/Genesis",
+      "params": {"type": "object", "required": [], "properties": {}}
+    },
+    {
+      "name": "get_isaaclab_repo",
+      "description": "Isaac Lab (NVIDIA) repo info — GPU-accelerated robot learning framework",
+      "url": "https://api.github.com/repos/isaac-sim/IsaacLab",
+      "params": {"type": "object", "required": [], "properties": {}}
+    },
+    {
+      "name": "get_dmcontrol_repo",
+      "description": "dm-control (DeepMind) repo info — MuJoCo-based RL environment suite",
+      "url": "https://api.github.com/repos/google-deepmind/dm_control",
+      "params": {"type": "object", "required": [], "properties": {}}
+    },
+    {
+      "name": "get_brax_repo",
+      "description": "Brax (Google) repo info — JAX-based differentiable physics for robot RL at scale",
+      "url": "https://api.github.com/repos/google/brax",
+      "params": {"type": "object", "required": [], "properties": {}}
+    },
+    {
+      "name": "get_habitat_sim_repo",
+      "description": "Habitat-Sim (Meta AI) repo info — 3D simulation for embodied AI navigation",
+      "url": "https://api.github.com/repos/facebookresearch/habitat-sim",
+      "params": {"type": "object", "required": [], "properties": {}}
+    },
+    {
+      "name": "get_openx_embodiment_repo",
+      "description": "Open X-Embodiment (Google DeepMind) repo info — cross-robot dataset for generalised policies",
+      "url": "https://api.github.com/repos/google-deepmind/open_x_embodiment",
+      "params": {"type": "object", "required": [], "properties": {}}
+    },
+    {
+      "name": "get_openpi_repo",
+      "description": "openpi (Physical Intelligence) repo info — pi0 foundation policy for dexterous manipulation",
+      "url": "https://api.github.com/repos/Physical-Intelligence/openpi",
+      "params": {"type": "object", "required": [], "properties": {}}
+    },
+    {
+      "name": "get_pddlstream_repo",
+      "description": "PDDLStream repo info — task and motion planning for robot manipulation",
+      "url": "https://api.github.com/repos/caelan/pddlstream",
+      "params": {"type": "object", "required": [], "properties": {}}
+    },
+    {
+      "name": "get_unitree_sdk2_repo",
+      "description": "Unitree SDK2 repo info — SDK for Go2, B2, H1 and G1 robot deployment",
+      "url": "https://api.github.com/repos/unitreerobotics/unitree_sdk2",
+      "params": {"type": "object", "required": [], "properties": {}}
+    },
+    {
+      "name": "get_moveit2_repo",
+      "description": "MoveIt2 repo info — motion planning for ROS2 robot arms",
+      "url": "https://api.github.com/repos/moveit/moveit2",
+      "params": {"type": "object", "required": [], "properties": {}}
+    },
+    {
+      "name": "get_airsim_repo",
+      "description": "AirSim (Microsoft) repo info — simulation for drones and autonomous vehicles",
+      "url": "https://api.github.com/repos/microsoft/AirSim",
+      "params": {"type": "object", "required": [], "properties": {}}
+    },
+    {
+      "name": "get_carla_repo",
+      "description": "CARLA autonomous driving simulator repo info — open-source driving simulation",
+      "url": "https://api.github.com/repos/carla-simulator/carla",
+      "params": {"type": "object", "required": [], "properties": {}}
+    },
+    {
+      "name": "get_acme_rl_repo",
+      "description": "Acme (DeepMind) repo info — distributed RL framework for robot control",
+      "url": "https://api.github.com/repos/google-deepmind/acme",
+      "params": {"type": "object", "required": [], "properties": {}}
+    },
+    {
+      "name": "get_aloha_repo",
+      "description": "ALOHA (Stanford) repo info — bimanual teleoperation and ACT policy for dexterous tasks",
+      "url": "https://api.github.com/repos/tonyzhaozh/aloha",
+      "params": {"type": "object", "required": [], "properties": {}}
+    },
+    {
+      "name": "get_dex_retargeting_repo",
+      "description": "Dex-Retargeting repo info — hand pose retargeting for dexterous robot hands",
+      "url": "https://api.github.com/repos/dexsuite/dex-retargeting",
+      "params": {"type": "object", "required": [], "properties": {}}
+    },
+    {
+      "name": "get_turtlebot4_repo",
+      "description": "TurtleBot4 repo info — ROS2 mobile robot navigation and perception",
+      "url": "https://api.github.com/repos/turtlebot/turtlebot4",
+      "params": {"type": "object", "required": [], "properties": {}}
+    },
+    {
+      "name": "get_stretch_ros2_repo",
+      "description": "Stretch ROS2 (Hello Robot) repo info — mobile manipulation robot SDK",
+      "url": "https://api.github.com/repos/hello-robot/stretch_ros2",
+      "params": {"type": "object", "required": [], "properties": {}}
+    },
+    {
+      "name": "get_pink_ik_repo",
+      "description": "Pink repo info — real-time inverse kinematics with Pinocchio for robot arms",
+      "url": "https://api.github.com/repos/stephane-caron/pink",
+      "params": {"type": "object", "required": [], "properties": {}}
+    },
+    {
+      "name": "get_pytorch_kinematics_repo",
+      "description": "PyTorch Kinematics repo info — GPU-accelerated FK/IK for robot arms in PyTorch",
+      "url": "https://api.github.com/repos/UM-ARM-Lab/pytorch_kinematics",
+      "params": {"type": "object", "required": [], "properties": {}}
+    },
+    {
+      "name": "get_pytorch3d_repo",
+      "description": "PyTorch3D (Meta) repo info — 3D deep learning library for robot perception",
+      "url": "https://api.github.com/repos/facebookresearch/pytorch3d",
+      "params": {"type": "object", "required": [], "properties": {}}
+    },
+    {
+      "name": "get_pointe_repo",
+      "description": "Point-E (OpenAI) repo info — 3D point cloud generation from text prompts",
+      "url": "https://api.github.com/repos/openai/point-e",
+      "params": {"type": "object", "required": [], "properties": {}}
+    },
+    {
+      "name": "get_florence2_repo",
+      "description": "Florence-2 (Microsoft) repo info — vision-language foundation model for robot tasks",
+      "url": "https://api.github.com/repos/microsoft/Florence-2",
+      "params": {"type": "object", "required": [], "properties": {}}
+    },
+    {
+      "name": "get_kscale_repo",
+      "description": "K-Scale Labs repo info — open-source humanoid robot simulation and training",
+      "url": "https://api.github.com/repos/kscalelabs/sim",
+      "params": {"type": "object", "required": [], "properties": {}}
+    },
+    {
+      "name": "get_robosuite_repo",
+      "description": "Robosuite (ARISE Initiative) repo info — modular robot manipulation simulation benchmark",
+      "url": "https://api.github.com/repos/ARISE-Initiative/robosuite",
+      "params": {"type": "object", "required": [], "properties": {}}
+    },
+    {
+      "name": "get_hulc2_repo",
+      "description": "HULC2 repo info — hierarchical universal language-conditioned robot policy",
+      "url": "https://api.github.com/repos/mees/hulc2",
+      "params": {"type": "object", "required": [], "properties": {}}
+    },
+    {
+      "name": "get_rtx_repo",
+      "description": "RT-X Open X-Embodiment repo info — robotics transformers and cross-embodiment training data",
+      "url": "https://api.github.com/repos/google-deepmind/open_x_embodiment",
+      "params": {"type": "object", "required": [], "properties": {}}
+    },
+    {
+      "name": "get_pyrobosim_repo",
+      "description": "PyRoboSim repo info — task-level robot simulation with navigation and manipulation",
+      "url": "https://api.github.com/repos/sea-bass/pyrobosim",
+      "params": {"type": "object", "required": [], "properties": {}}
+    },
+    {
+      "name": "get_igibson_repo",
+      "description": "iGibson (Stanford) repo info — interactive household robot simulation environment",
+      "url": "https://api.github.com/repos/StanfordVL/iGibson",
+      "params": {"type": "object", "required": [], "properties": {}}
+    },
+    {
+      "name": "get_pinocchio_repo",
+      "description": "Pinocchio repo info — fast rigid body dynamics library for robot kinematics and control",
+      "url": "https://api.github.com/repos/stack-of-tasks/pinocchio",
+      "params": {"type": "object", "required": [], "properties": {}}
+    },
+    {
+      "name": "get_rlax_repo",
+      "description": "RLAX (DeepMind) repo info — JAX RL algorithm components for robot policy learning",
+      "url": "https://api.github.com/repos/google-deepmind/rlax",
+      "params": {"type": "object", "required": [], "properties": {}}
+    },
+    {
+      "name": "get_serl_repo",
+      "description": "SERL (Berkeley) repo info — sample-efficient real-robot RL for contact-rich manipulation",
+      "url": "https://api.github.com/repos/rail-berkeley/serl",
+      "params": {"type": "object", "required": [], "properties": {}}
+    }
+  ]
+}
