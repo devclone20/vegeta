@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 500" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14">
+  <defs>
+    <linearGradient id="accentline" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#6ea8ff" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#6ea8ff" stop-opacity="0.1"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1100" height="500" rx="14" fill="#0d1117"/>
+  <rect x="1.5" y="1.5" width="1097" height="497" rx="13" fill="none" stroke="#30363d" stroke-width="3"/>
+  <rect x="0" y="492" width="1100" height="4" fill="url(#accentline)" opacity="0.9"/>
+
+  <circle cx="28" cy="26" r="6" fill="#ff5f57"/>
+  <circle cx="50" cy="26" r="6" fill="#febc2e"/>
+  <circle cx="72" cy="26" r="6" fill="#28c840"/>
+
+  <g stroke="#6ea8ff" fill="none" stroke-width="1.6" stroke-linecap="round">
+    <rect x="101" y="15.5" width="20" height="17" rx="6"/>
+    <line x1="111" y1="15.5" x2="111" y2="11.5"/>
+  </g>
+  <circle cx="111" cy="10" r="1.6" fill="#6ea8ff"/>
+  <circle cx="106.8" cy="22" r="1.7" fill="#6ea8ff"/>
+  <circle cx="115.2" cy="22" r="1.7" fill="#6ea8ff"/>
+  <path d="M107 27 Q111 30 115 27" stroke="#6ea8ff" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+
+  <text x="550" y="31" text-anchor="middle" font-size="13" fill="#8b949e">the acp job loop the autopilot actually runs, state by state</text>
+
+  <!-- pipeline -->
+  <rect x="40" y="104" width="180" height="64" rx="10" fill="#161b22" stroke="#30363d"/>
+  <text x="130" y="132" text-anchor="middle" font-size="12.5" fill="#6ea8ff">create-job</text>
+  <text x="130" y="152" text-anchor="middle" font-size="10.5" fill="#566070">acp client</text>
+
+  <rect x="250" y="104" width="180" height="64" rx="10" fill="#161b22" stroke="#30363d"/>
+  <text x="340" y="132" text-anchor="middle" font-size="12.5" fill="#8b949e">budget_set</text>
+  <text x="340" y="152" text-anchor="middle" font-size="10.5" fill="#566070">wait · poll 8s</text>
+
+  <rect x="460" y="104" width="180" height="64" rx="10" fill="#161b22" stroke="#30363d"/>
+  <text x="550" y="132" text-anchor="middle" font-size="12.5" fill="#6ea8ff">fund</text>
+  <text x="550" y="152" text-anchor="middle" font-size="10.5" fill="#566070">escrow in USDC</text>
+
+  <rect x="670" y="104" width="180" height="64" rx="10" fill="#161b22" stroke="#30363d"/>
+  <text x="760" y="132" text-anchor="middle" font-size="12.5" fill="#8b949e">submitted</text>
+  <text x="760" y="152" text-anchor="middle" font-size="10.5" fill="#566070">provider delivers</text>
+
+  <rect x="880" y="104" width="180" height="64" rx="10" fill="#161b22" stroke="#30363d"/>
+  <text x="970" y="132" text-anchor="middle" font-size="12.5" fill="#6ea8ff">complete</text>
+  <text x="970" y="152" text-anchor="middle" font-size="10.5" fill="#566070">escrow released</text>
+
+  <g stroke="#566070" stroke-width="2.5" fill="none" stroke-linecap="round">
+    <path d="M226 136 L241 136"/>
+    <path d="M235 130 L241 136 L235 142"/>
+    <path d="M436 136 L451 136"/>
+    <path d="M445 130 L451 136 L445 142"/>
+    <path d="M646 136 L661 136"/>
+    <path d="M655 130 L661 136 L655 142"/>
+    <path d="M856 136 L871 136"/>
+    <path d="M865 130 L871 136 L865 142"/>
+  </g>
+
+  <!-- loop back -->
+  <g stroke="#30363d" stroke-width="2" fill="none" stroke-linecap="round">
+    <path d="M970 168 L970 192 L130 192 L130 174"/>
+  </g>
+  <path d="M124 182 L130 174 L136 182" stroke="#30363d" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <text x="550" y="212" text-anchor="middle" font-size="11" fill="#566070">repeat every CYCLE_INTERVAL · default 3600 s</text>
+
+  <!-- commands -->
+  <rect x="40" y="236" width="520" height="176" rx="12" fill="#161b22" stroke="#30363d"/>
+  <text x="64" y="264" font-size="12.5" fill="#6ea8ff">what each state runs</text>
+  <text x="64" y="296" font-size="11.5" fill="#c9d1d9">acp client create-job --provider --offering-name</text>
+  <text x="64" y="320" font-size="11.5" fill="#c9d1d9">acp job history --job-id · poll until budget_set</text>
+  <text x="64" y="344" font-size="11.5" fill="#c9d1d9">acp client fund --job-id --chain-id 8453</text>
+  <text x="64" y="368" font-size="11.5" fill="#c9d1d9">acp client complete --job-id --chain-id 8453</text>
+  <text x="64" y="394" font-size="11" fill="#566070">every write is wrapped in an exclusive agent-switch lock</text>
+
+  <!-- constants -->
+  <rect x="580" y="236" width="480" height="176" rx="12" fill="#161b22" stroke="#30363d"/>
+  <text x="604" y="264" font-size="12.5" fill="#6ea8ff">loop constants</text>
+  <text x="604" y="296" font-size="11.5" fill="#8b949e">poll interval</text>
+  <text x="1036" y="296" text-anchor="end" font-size="11.5" fill="#c9d1d9">8 s</text>
+  <text x="604" y="320" font-size="11.5" fill="#8b949e">job timeout</text>
+  <text x="1036" y="320" text-anchor="end" font-size="11.5" fill="#c9d1d9">600 s</text>
+  <text x="604" y="344" font-size="11.5" fill="#8b949e">cycle interval</text>
+  <text x="1036" y="344" text-anchor="end" font-size="11.5" fill="#c9d1d9">3600 s · env</text>
+  <text x="604" y="368" font-size="11.5" fill="#8b949e">jobs per cycle</text>
+  <text x="1036" y="368" text-anchor="end" font-size="11.5" fill="#c9d1d9">1 · env</text>
+  <text x="604" y="394" font-size="11" fill="#566070">infra/ops/vegeta_autopilot.py</text>
+
+  <text x="550" y="440" text-anchor="middle" font-size="13" fill="#8b949e">no state is assumed — each one is polled until the chain confirms it</text>
+</svg>

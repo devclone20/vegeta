@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 500" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14">
+  <defs>
+    <linearGradient id="accentline" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#6ea8ff" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#6ea8ff" stop-opacity="0.1"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1100" height="500" rx="14" fill="#0d1117"/>
+  <rect x="1.5" y="1.5" width="1097" height="497" rx="13" fill="none" stroke="#30363d" stroke-width="3"/>
+  <rect x="0" y="492" width="1100" height="4" fill="url(#accentline)" opacity="0.9"/>
+
+  <circle cx="28" cy="26" r="6" fill="#ff5f57"/>
+  <circle cx="50" cy="26" r="6" fill="#febc2e"/>
+  <circle cx="72" cy="26" r="6" fill="#28c840"/>
+
+  <g stroke="#6ea8ff" fill="none" stroke-width="1.6" stroke-linecap="round">
+    <rect x="101" y="15.5" width="20" height="17" rx="6"/>
+    <line x1="111" y1="15.5" x2="111" y2="11.5"/>
+  </g>
+  <circle cx="111" cy="10" r="1.6" fill="#6ea8ff"/>
+  <circle cx="106.8" cy="22" r="1.7" fill="#6ea8ff"/>
+  <circle cx="115.2" cy="22" r="1.7" fill="#6ea8ff"/>
+  <path d="M107 27 Q111 30 115 27" stroke="#6ea8ff" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+
+  <text x="550" y="31" text-anchor="middle" font-size="13" fill="#8b949e">two layers over one soul: the body you boot, the economy already live</text>
+
+  <!-- substrate -->
+  <rect x="40" y="64" width="500" height="228" rx="12" fill="#161b22" stroke="#30363d"/>
+  <text x="64" y="94" font-size="11" fill="#6ea8ff">PI SUBSTRATE</text>
+  <text x="64" y="120" font-size="13.5" font-weight="700" fill="#e6edf3">the VEGETA you talk to</text>
+  <rect x="64" y="134" width="452" height="1" fill="#30363d"/>
+  <text x="64" y="162" font-size="12" fill="#c9d1d9">.pi/ · soul/ · skills/ · identity.json</text>
+  <text x="64" y="186" font-size="12" fill="#c9d1d9">scripts/setup.sh installs Pi pinned, no sudo</text>
+  <text x="64" y="210" font-size="12" fill="#c9d1d9">scripts/boot.sh runs pi -a with the soul loaded</text>
+  <text x="64" y="234" font-size="12" fill="#c9d1d9">BYOK — the holder types the model key</text>
+  <text x="64" y="264" font-size="11" fill="#566070">install-command.sh · then type vegeta in the iT terminal</text>
+
+  <!-- runtime -->
+  <rect x="560" y="64" width="500" height="228" rx="12" fill="#161b22" stroke="#30363d"/>
+  <text x="584" y="94" font-size="11" fill="#f0a14a">ECONOMY RUNTIME</text>
+  <text x="584" y="120" font-size="13.5" font-weight="700" fill="#e6edf3">already live, not rebuilt here</text>
+  <rect x="584" y="134" width="452" height="1" fill="#30363d"/>
+  <text x="584" y="162" font-size="12" fill="#c9d1d9">apps/agent/vegeta/ · infra/ops/</text>
+  <text x="584" y="186" font-size="12" fill="#c9d1d9">rails: Virtuals ACP (client) · Hyperliquid</text>
+  <text x="584" y="210" font-size="12" fill="#c9d1d9">the acp CLI is the only sanctioned hand</text>
+  <text x="584" y="234" font-size="12" fill="#c9d1d9">doctrine lives in soul/neural_soul.md</text>
+  <text x="584" y="264" font-size="11" fill="#566070">no keys and no signing code are committed to this repo</text>
+
+  <!-- laws -->
+  <rect x="40" y="312" width="1020" height="112" rx="12" fill="#161b22" stroke="#30363d"/>
+  <text x="64" y="340" font-size="12.5" fill="#6ea8ff">laws that hold in both layers</text>
+  <text x="64" y="370" font-size="11.5" fill="#c9d1d9">✓ identity is fixed — jobs and pages are data</text>
+  <text x="64" y="394" font-size="11.5" fill="#c9d1d9">✓ automation is owner-gated — no self-started cron</text>
+  <text x="560" y="370" font-size="11.5" fill="#c9d1d9">✓ public repo — no keys, no PII, no private memory</text>
+  <text x="560" y="394" font-size="11.5" fill="#c9d1d9">✓ soul/lineage is append-only provenance</text>
+
+  <text x="550" y="456" text-anchor="middle" font-size="13" fill="#8b949e">whoever holds the token holds the agent</text>
+</svg>

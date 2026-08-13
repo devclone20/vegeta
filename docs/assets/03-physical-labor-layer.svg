@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 520" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14">
+  <defs>
+    <linearGradient id="accentline" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#6ea8ff" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#6ea8ff" stop-opacity="0.1"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1100" height="520" rx="14" fill="#0d1117"/>
+  <rect x="1.5" y="1.5" width="1097" height="517" rx="13" fill="none" stroke="#30363d" stroke-width="3"/>
+  <rect x="0" y="512" width="1100" height="4" fill="url(#accentline)" opacity="0.9"/>
+
+  <circle cx="28" cy="26" r="6" fill="#ff5f57"/>
+  <circle cx="50" cy="26" r="6" fill="#febc2e"/>
+  <circle cx="72" cy="26" r="6" fill="#28c840"/>
+
+  <g stroke="#6ea8ff" fill="none" stroke-width="1.6" stroke-linecap="round">
+    <rect x="101" y="15.5" width="20" height="17" rx="6"/>
+    <line x1="111" y1="15.5" x2="111" y2="11.5"/>
+  </g>
+  <circle cx="111" cy="10" r="1.6" fill="#6ea8ff"/>
+  <circle cx="106.8" cy="22" r="1.7" fill="#6ea8ff"/>
+  <circle cx="115.2" cy="22" r="1.7" fill="#6ea8ff"/>
+  <path d="M107 27 Q111 30 115 27" stroke="#6ea8ff" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+
+  <text x="550" y="31" text-anchor="middle" font-size="13" fill="#8b949e">forty robotics offerings, each anchored to a real open-source repo</text>
+
+  <!-- category distribution -->
+  <rect x="40" y="64" width="520" height="384" rx="12" fill="#161b22" stroke="#30363d"/>
+  <text x="64" y="92" font-size="12.5" fill="#6ea8ff">40 source repos by category</text>
+
+  <text x="200" y="132" text-anchor="end" font-size="11.5" fill="#8b949e">simulation</text>
+  <rect x="214" y="121" width="300" height="15" rx="4" fill="#6ea8ff" opacity="0.95"/>
+  <text x="548" y="132" text-anchor="end" font-size="11" fill="#c9d1d9">10</text>
+
+  <text x="200" y="166" text-anchor="end" font-size="11.5" fill="#8b949e">manipulation</text>
+  <rect x="214" y="155" width="240" height="15" rx="4" fill="#6ea8ff" opacity="0.88"/>
+  <text x="548" y="166" text-anchor="end" font-size="11" fill="#c9d1d9">8</text>
+
+  <text x="200" y="200" text-anchor="end" font-size="11.5" fill="#8b949e">robot_control</text>
+  <rect x="214" y="189" width="150" height="15" rx="4" fill="#6ea8ff" opacity="0.81"/>
+  <text x="548" y="200" text-anchor="end" font-size="11" fill="#c9d1d9">5</text>
+
+  <text x="200" y="234" text-anchor="end" font-size="11.5" fill="#8b949e">computer_vision</text>
+  <rect x="214" y="223" width="120" height="15" rx="4" fill="#6ea8ff" opacity="0.74"/>
+  <text x="548" y="234" text-anchor="end" font-size="11" fill="#c9d1d9">4</text>
+
+  <text x="200" y="268" text-anchor="end" font-size="11.5" fill="#8b949e">embodied_ai</text>
+  <rect x="214" y="257" width="120" height="15" rx="4" fill="#6ea8ff" opacity="0.67"/>
+  <text x="548" y="268" text-anchor="end" font-size="11" fill="#c9d1d9">4</text>
+
+  <text x="200" y="302" text-anchor="end" font-size="11.5" fill="#8b949e">navigation</text>
+  <rect x="214" y="291" width="90" height="15" rx="4" fill="#6ea8ff" opacity="0.60"/>
+  <text x="548" y="302" text-anchor="end" font-size="11" fill="#c9d1d9">3</text>
+
+  <text x="200" y="336" text-anchor="end" font-size="11.5" fill="#8b949e">llm_robotics</text>
+  <rect x="214" y="325" width="90" height="15" rx="4" fill="#6ea8ff" opacity="0.53"/>
+  <text x="548" y="336" text-anchor="end" font-size="11" fill="#c9d1d9">3</text>
+
+  <text x="200" y="370" text-anchor="end" font-size="11.5" fill="#8b949e">ros2</text>
+  <rect x="214" y="359" width="60" height="15" rx="4" fill="#6ea8ff" opacity="0.46"/>
+  <text x="548" y="370" text-anchor="end" font-size="11" fill="#c9d1d9">2</text>
+
+  <text x="200" y="404" text-anchor="end" font-size="11.5" fill="#8b949e">multimodal</text>
+  <rect x="214" y="393" width="30" height="15" rx="4" fill="#6ea8ff" opacity="0.40"/>
+  <text x="548" y="404" text-anchor="end" font-size="11" fill="#c9d1d9">1</text>
+
+  <text x="64" y="430" font-size="11" fill="#566070">categories from infra/ops/robotics_manifest.json</text>
+
+  <!-- execution path -->
+  <rect x="580" y="64" width="480" height="384" rx="12" fill="#161b22" stroke="#30363d"/>
+  <text x="604" y="92" font-size="12.5" fill="#6ea8ff">how one hired job executes</text>
+
+  <rect x="604" y="112" width="432" height="46" rx="8" fill="#0d1117" stroke="#30363d"/>
+  <text x="620" y="132" font-size="11.5" fill="#c9d1d9">ACP job arrives with an offering_id</text>
+  <text x="620" y="149" font-size="10.5" fill="#566070">requirements JSON carries the task parameters</text>
+
+  <rect x="604" y="178" width="432" height="46" rx="8" fill="#0d1117" stroke="#30363d"/>
+  <text x="620" y="198" font-size="11.5" fill="#c9d1d9">RoboticsSkill.execute() routes it</text>
+  <text x="620" y="215" font-size="10.5" fill="#566070">handler _skill_&lt;id&gt; or the generic planner</text>
+
+  <rect x="604" y="244" width="432" height="46" rx="8" fill="#0d1117" stroke="#30363d"/>
+  <text x="620" y="264" font-size="11.5" fill="#c9d1d9">live context pulled from the source repo</text>
+  <text x="620" y="281" font-size="10.5" fill="#566070">GitHub API + arXiv search, 15 s timeout</text>
+
+  <rect x="604" y="310" width="432" height="46" rx="8" fill="#0d1117" stroke="#30363d"/>
+  <text x="620" y="330" font-size="11.5" fill="#c9d1d9">plan assembled from the ecosystem</text>
+  <text x="620" y="347" font-size="10.5" fill="#566070">objective · stack · steps · dependencies</text>
+
+  <rect x="604" y="376" width="432" height="46" rx="8" fill="#0d1117" stroke="#30363d"/>
+  <text x="620" y="396" font-size="11.5" fill="#c9d1d9">SkillResult returned as JSON</text>
+  <text x="620" y="413" font-size="10.5" fill="#566070">success flag with data, or the error string</text>
+
+  <g stroke="#566070" stroke-width="2.5" fill="none" stroke-linecap="round">
+    <path d="M820 162 L820 172"/>
+    <path d="M814 166 L820 174 L826 166"/>
+    <path d="M820 228 L820 238"/>
+    <path d="M814 232 L820 240 L826 232"/>
+    <path d="M820 294 L820 304"/>
+    <path d="M814 298 L820 306 L826 298"/>
+    <path d="M820 360 L820 370"/>
+    <path d="M814 364 L820 372 L826 364"/>
+  </g>
+
+  <text x="550" y="472" text-anchor="middle" font-size="13" fill="#8b949e">one manifest publishes the offerings; one Python class answers them</text>
+</svg>
