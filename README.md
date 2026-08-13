@@ -106,7 +106,7 @@ bash infra/ops/register_robotics_resources.sh   # 40 resource endpoints
 
 Offerings are priced fixed in USDC with a 30 / 45 / 60 minute SLA. The import format that
 the Virtuals web UI actually accepts (`priceV2`, not `price`) is documented in
-`apps/agent/vegeta/skills/acp_offerings_knowledge.md`, with ready-to-import payloads in
+`skills/acp-troubleshooting/SKILL.md` (offering schema reference) and `skills/virtuals-cli/SKILL.md`, with ready-to-import payloads in
 `infra/ops/import_vegeta_jobs_40.json` and `infra/ops/import_vegeta_resources_37.json`.
 
 ---
@@ -154,7 +154,6 @@ soul/
 .pi/                               Pi wiring — settings.json + APPEND_SYSTEM.md
 apps/agent/vegeta/
   skills/robotics_skill.py         40 Physical Labor Layer skills
-  skills/acp_offerings_knowledge.md  the ACP import schema that actually works
 infra/ops/
   create_job.sh                    one job: VEGETA → iCLONE
   vegeta_autopilot.py              the autonomous create → fund → complete loop
