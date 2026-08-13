@@ -5,12 +5,20 @@
 
 set -euo pipefail
 
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
 ACP="/opt/homebrew/bin/acp"
 CHAIN_ID="8453"
-MANIFEST="$(dirname "$0")/robotics_manifest.json"
+MANIFEST="$SCRIPT_DIR/robotics_manifest.json"
+
+if [[ ! -f "$MANIFEST" ]]; then
+  echo "Manifest not found: $MANIFEST" >&2
+  exit 1
+fi
 
 echo "🔗 VEGETA Physical Labor Layer — Registering 40 resources"
 echo "Chain: Base mainnet ($CHAIN_ID)"
+echo "Manifest: $MANIFEST"
 echo ""
 
 # Switch to VEGETA
@@ -18,14 +26,15 @@ echo ""
 echo "✓ Switched to VEGETA"
 echo ""
 
-python3 - <<'PYEOF'
-import json, subprocess, sys, time
+MANIFEST="$MANIFEST" python3 - <<'PYEOF'
+import json, os, subprocess, sys, time
 from pathlib import Path
 
 ACP = "/opt/homebrew/bin/acp"
 CHAIN_ID = "8453"
+manifest_path = Path(os.environ["MANIFEST"])
 
-with open("ops/robotics_manifest.json") as f:
+with open(manifest_path) as f:
     manifest = json.load(f)
 
 resources = manifest["resources"]

@@ -5,9 +5,16 @@
 
 set -euo pipefail
 
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
 ACP="/opt/homebrew/bin/acp"
 CHAIN_ID="8453"
-MANIFEST="$(dirname "$0")/robotics_manifest.json"
+MANIFEST="$SCRIPT_DIR/robotics_manifest.json"
+
+if [[ ! -f "$MANIFEST" ]]; then
+  echo "Manifest not found: $MANIFEST" >&2
+  exit 1
+fi
 
 echo "🤖 VEGETA Physical Labor Layer — Publishing 40 robotics offerings"
 echo "Chain: Base mainnet ($CHAIN_ID)"
@@ -20,14 +27,13 @@ echo "✓ Switched to VEGETA"
 echo ""
 
 # Read offerings from manifest and publish each one
-python3 - <<'PYEOF'
-import json, subprocess, sys, time
+MANIFEST="$MANIFEST" python3 - <<'PYEOF'
+import json, os, subprocess, sys, time
 from pathlib import Path
 
 ACP = "/opt/homebrew/bin/acp"
 CHAIN_ID = "8453"
-manifest_path = Path(__file__).parent / "robotics_manifest.json"
-manifest_path = Path("ops/robotics_manifest.json")
+manifest_path = Path(os.environ["MANIFEST"])
 
 with open(manifest_path) as f:
     manifest = json.load(f)
