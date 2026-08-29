@@ -14,15 +14,35 @@ else
   FILES=$(find . -type f -not -path './.git/*' -not -path './node_modules/*' -not -name manifest.json | sed 's|^\./||' | sort)
 fi
 
-# A tracked symlink (e.g. .hermes/skills -> ../skills) is content in git too: what git
-# stores is the LINK TARGET, not the tree behind it. Hash that string, so repointing the
-# link at another directory shows up as a manifest mismatch like any other edit.
-hash_of() {
-  if [ -L "$1" ]; then
-    printf 'symlink:%s' "$(readlink "$1")" | shasum -a 256 | awk '{print $1}'
-  else
-    shasum -a 256 "$1" | awk '{print $1}'
-  fi
+hash_of() { shasum -a 256 "$1" | awk '{print $1}'; }
+# A tracked symlink has no file bytes of its own — git stores its TARGET PATH, and that is
+# what we hash, so .hermes/skills (the project-skills link) is covered like everything else.
+# A verifier reproduces it with: printf '%s' "$(readlink <path>)" | shasum -a 256
+hash_link() { printf '%s' "$(readlink "$1")" | shasum -a 256 | awk '{print $1}'; }
+
+{
+  echo '{'
+  echo '  "manifest_version": 1,'
+  echo "  \"generated\": \"$(date -u +%Y-%m-%dT%H:%M:%SZ)\","
+  echo '  "algorithm": "sha256",'
+  echo '  "repo": "https://github.com/devclone20/inft-i01",'
+  echo '  "note": "Authoritative hashes for a token live on-chain / Irys, not here (see docs/BOOTSTRAP.md). This file is a convenience mirror of the tracked tree. Symlinks are hashed by their target path (what git stores), not by the bytes they point at.",'
+  echo '  "files": {'
+  first=true
+  while IFS= read -r f; do
+    [ -n "$f" ] || continue
+    # -L before -f: a symlink to a regular file satisfies both, and the link is what git tracks.
+    if   [ -L "$f" ]; then h="$(hash_link "$f")"
+    elif [ -f "$f" ]; then h="$(hash_of "$f")"
+    else continue
+    fi
+    $first || echo ','
+    first=false
+    printf '    "%s": "%s"' "$f" "$h"
+  done <<< "$FILES"
+  echo ''
+  echo '  }'
+  echo '}'
 } > "$SELF"
 
 # Entries are the 4-space-indented lines inside "files"; the header keys sit at 2 spaces.
