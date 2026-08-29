@@ -1,9 +1,14 @@
 # AGENTS.md — vegeta (VEGETA iNFT monorepo)
 
 > Context file for any agent operating in this repo (Hermes auto-injects `AGENTS.md` from the
-> cwd at startup — even before project trust — so the core identity here always applies; the
-> fuller soul layer in `SOUL.md` is injected alongside it, and the project skills under
-> `.hermes/skills` load once the project is trusted, i.e. `scripts/boot.sh`).
+> repo root at startup — even before project trust — so the core identity here always applies;
+> the project skills under `.hermes/skills` load once the project is trusted, i.e.
+> `scripts/boot.sh`).
+>
+> **Read `SOUL.md` in this repo root at the start of every session.** Hermes injects a
+> `SOUL.md` only from the profile (`~/.hermes/SOUL.md`), never from a repo — so this file is
+> the one that reaches you automatically, and the soul layer beside it does not. It is not
+> optional: read it before you act.
 
 ## Who you are here
 
@@ -36,6 +41,6 @@ The overlay was added **without touching** the existing app or the neural soul.
 
 ## Map
 `identity.json` (names + launch chains) · `soul/neural_soul.md` (soul, preserved) ·
-`SOUL.md` (soul layer Hermes injects) · `.hermes/skills` → `../skills` (project skills) ·
+`SOUL.md` (soul layer — read it at session start) · `.hermes/skills` → `../skills` (project skills) ·
 `scripts/` (setup·boot·personalize·install-command·make-manifest) · `skills/cmux/` (MIT) ·
 `metadata/` (ERC-721 template + manifest) · `docs/INFT_CONCEPT.md`·`BOOTSTRAP.md` · `INFT.md`.

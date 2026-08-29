@@ -154,7 +154,7 @@ soul/
   neural_soul.md                   the soul, v2.0.0 — loaded every session
   NEURAL_SOUL_ARCHITECTURE.md      the four-lobe skeleton shared across CLONE FRAME
   lineage/                         provenance, append-only
-SOUL.md                            soul distillation Hermes injects (with AGENTS.md) at boot
+SOUL.md                            soul distillation — AGENTS.md sends the agent here at boot
 .hermes/skills →                   symlink to ../skills, so Hermes finds them once trusted
 apps/agent/vegeta/
   skills/robotics_skill.py         40 Physical Labor Layer skills

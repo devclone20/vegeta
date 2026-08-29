@@ -49,7 +49,8 @@ enough for any LLM to verify and **regenerate the agent's entire monorepo** (§4
 **iCLONE soul line**. It is **not one agent's body**; it is the **global template**
 every buyer forges their own personal iNFT agent from (GitHub "template repository",
 public). The buyer pastes one line to their assistant, which reads
-[`FORGE.md`](../FORGE.md) and scaffolds a personalized, single-commit repo — named by
+`FORGE.md` in the [template](https://github.com/devclone20/inft-i01) and scaffolds a
+personalized, single-commit repo — named by
 the buyer, with their (local-only) owner profile — then boots it.
 
 The canonical *body definition* stays `inft-i01`; each buyer's *instance* is generated
@@ -67,8 +68,10 @@ skills, the Hermes wiring — is shared and identity-agnostic.
 - **Face: the marketplace name.** The name published with the token on OpenSea (or any
   Web3 marketplace) sits on top. The agent answers to that name.
 - **Soul: the CLONE FRAME neural soul.** The iCLONE four-lobe neural soul
-  (`soul/neural_soul.md`) is layered onto Hermes through Hermes's own soul hook
-  (`SOUL.md`, auto-injected at boot) plus `AGENTS.md`. Same
+  (`soul/neural_soul.md`) is layered onto Hermes through `AGENTS.md` — the project context
+  file Hermes auto-injects from the repo root — which in turn directs the agent to the
+  `SOUL.md` distillation beside it (Hermes injects a `SOUL.md` only from the profile,
+  `~/.hermes/SOUL.md`, never from a repo). Same
   brain architecture as every CLONE FRAME soul; the vocation here is **coding &
   orchestration**.
 

@@ -2,7 +2,8 @@
 
 > The regeneration contract. This is the procedure any capable LLM follows when a
 > holder presents iNFT metadata and says: **"create the monorepo of my iNFT agent."**
-> For a fresh purchase, the friendlier path is [`../FORGE.md`](../FORGE.md); this file
+> For a fresh purchase, the friendlier path is `FORGE.md` in the
+> [inft-i01 template](https://github.com/devclone20/inft-i01); this file
 > is the integrity-critical version for regenerating a *specific* token's agent.
 
 ## Inputs you receive
@@ -47,9 +48,11 @@ From the token's metadata (on-chain / Irys), the `agent_bootstrap` block:
 3. **Install the substrate.** Run `scripts/setup.sh` (the official Hermes installer, no
    sudo), or manually the install line it prints.
 4. **Wire the identity.** The repo already carries it: `.hermes/skills` is a symlink to
-   `../skills`, where Hermes discovers this project's skills; `SOUL.md` layers the soul
-   distillation onto Hermes's system prompt; `AGENTS.md` gives project context. Hermes
-   auto-injects both files — nothing to configure, being in the repo root IS the config.
+   `../skills`, where Hermes discovers this project's skills; `AGENTS.md` gives project
+   context and is the file Hermes auto-injects from the repo root; `SOUL.md` beside it
+   carries the soul distillation. Hermes injects a `SOUL.md` only from the profile
+   (`~/.hermes/SOUL.md`), never from a repo, so `AGENTS.md` instructs the agent to read
+   this one at session start. Nothing to configure — being in the repo root IS the config.
 5. **Connect a model (BYOK).** The holder sets their provider key themselves —
    `hermes model`, or an env var — **never pasted to the assistant**. Keys live in
    `~/.hermes/auth.json` (0600) or the environment, never in the repo.

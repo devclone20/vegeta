@@ -16,9 +16,12 @@ say() { printf '%s\n' "$*"; }
 say "── vegeta · Hermes substrate setup ────────────────────────────"
 
 # ── Preflight ────────────────────────────────────────────────────
-command -v git  >/dev/null 2>&1 || { say "✗ git is required."; exit 1; }
-command -v curl >/dev/null 2>&1 || { say "✗ curl is required to fetch the Hermes installer."; exit 1; }
-say "  ✓ git and curl present"
+command -v git     >/dev/null 2>&1 || { say "✗ git is required."; exit 1; }
+command -v curl    >/dev/null 2>&1 || { say "✗ curl is required to fetch the Hermes installer."; exit 1; }
+# python3 reads identity.json here, in personalize.sh and in install-command.sh — without it
+# the launcher would silently be named for the template instead of this agent.
+command -v python3 >/dev/null 2>&1 || { say "✗ python3 is required (identity.json is read with it)."; exit 1; }
+say "  ✓ git, curl and python3 present"
 
 # ── Install the substrate: Hermes Agent (no sudo) ────────────────
 if command -v hermes >/dev/null 2>&1; then
@@ -37,6 +40,7 @@ fi
 
 # opensrc is an independent helper (read real dependency source before vendoring).
 if command -v npm >/dev/null 2>&1; then
+  say "  \$ npm install -g --ignore-scripts $OPENSRC_PKG"
   if npm install -g --ignore-scripts "$OPENSRC_PKG" >/dev/null 2>&1; then
     say "  ✓ opensrc installed"
   else
