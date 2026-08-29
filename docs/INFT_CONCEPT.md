@@ -69,10 +69,10 @@ skills, the Hermes wiring — is shared and identity-agnostic.
   Web3 marketplace) sits on top. The agent answers to that name.
 - **Soul: the CLONE FRAME neural soul.** The iCLONE four-lobe neural soul
   (`soul/neural_soul.md`) is layered onto Hermes through `AGENTS.md` — the project context
-  file Hermes auto-injects from the repo root — which in turn directs the agent to the
-  `SOUL.md` distillation beside it (Hermes injects a `SOUL.md` only from the profile,
-  `~/.hermes/SOUL.md`, never from a repo). Same
-  brain architecture as every CLONE FRAME soul; the vocation here is **coding &
+  file Hermes injects from the repo root on every session, with no trust step — which carries
+  the soul distillation directly. The `SOUL.md` beside it is the sealed canonical copy and is
+  never injected from a repo: Hermes reads `SOUL.md` from the profile (`~/.hermes/SOUL.md`)
+  only. Same brain architecture as every CLONE FRAME soul; the vocation here is **coding &
   orchestration**.
 
 **Triple recognition.** The agent recognizes itself, and responds, when addressed as:

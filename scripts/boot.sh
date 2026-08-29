@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 # vegeta — boot the agent with this project's resources TRUSTED.
-# Hermes auto-injects AGENTS.md from the repo root, and discovers project skills under
-# .hermes/skills once the project root is trusted. `hermes skills trust` grants
-# that trust (persisted). A repo SOUL.md is NOT auto-injected — Hermes reads SOUL.md from
-# ~/.hermes only — so AGENTS.md tells the agent to read this repo's SOUL.md at session
-# start. Extra args pass through to `hermes chat`.
+# Hermes injects AGENTS.md from the repo root into every session — always, no trust step —
+# and AGENTS.md carries the soul. Trust is only about project skills: `hermes skills trust`
+# (persisted) is what makes .hermes/skills discoverable. The repo's SOUL.md is the sealed
+# canonical text and is never injected: Hermes reads SOUL.md from ~/.hermes only.
+# Extra args pass through to `hermes chat`.
 set -euo pipefail
 cd "$(dirname "$0")/.."
 

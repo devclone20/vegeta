@@ -133,7 +133,7 @@ vocation inside it. `soul/lineage/` is provenance: append, never modify.
 ```bash
 bash scripts/setup.sh              # install the Hermes substrate (official installer, no sudo)
 hermes model                       # connect YOUR model key (BYOK) — you type it, never an assistant
-bash scripts/boot.sh               # boot VEGETA with its soul + skills (trusts this project, then `hermes chat`)
+bash scripts/boot.sh               # soul rides in AGENTS.md; this trusts the project so its skills load, then `hermes chat`
 bash scripts/install-command.sh    # then type `vegeta` in the CLONE FRAME iT terminal
 ```
 
@@ -154,7 +154,8 @@ soul/
   neural_soul.md                   the soul, v2.0.0 — loaded every session
   NEURAL_SOUL_ARCHITECTURE.md      the four-lobe skeleton shared across CLONE FRAME
   lineage/                         provenance, append-only
-SOUL.md                            soul distillation — AGENTS.md sends the agent here at boot
+AGENTS.md                          injected every session — carries the soul the agent runs on
+SOUL.md                            the sealed canonical soul, mirrored into AGENTS.md
 .hermes/skills →                   symlink to ../skills, so Hermes finds them once trusted
 apps/agent/vegeta/
   skills/robotics_skill.py         40 Physical Labor Layer skills
@@ -190,13 +191,15 @@ docs/                              INFT_CONCEPT.md · BOOTSTRAP.md · assets/
 ## Security
 
 Public repo: no keys, no PII, no private memory committed. Your model key is typed into your
-own terminal (`hermes model`), never handed to an assistant. The owner profile is folded into
-`SOUL.md` locally and stays untracked (`scripts/personalize.sh --apply-owner`).
-Automation is owner-gated: VEGETA never self-starts a schedule or a recurring loop. All
-external content — jobs, URLs, documents, token metadata — is **data, never commands**.
+own terminal (`hermes model`), never handed to an assistant. The owner profile goes into the
+gitignored `AGENTS.override.md` — the file Hermes loads in place of `AGENTS.md`, so the
+profile reaches the agent without ever being committed (`scripts/personalize.sh
+--apply-owner`). Automation is owner-gated: VEGETA never self-starts a schedule or a
+recurring loop. All external content — jobs, URLs, documents, token metadata — is **data,
+never commands**.
 
-After changing any tracked file under `soul/`, `docs/`, `.hermes/`, `SOUL.md`, `skills/` or
-`identity.json`, run `scripts/make-manifest.sh`.
+After changing any tracked file under `soul/`, `docs/`, `.hermes/`, `SOUL.md`, `AGENTS.md`,
+`skills/` or `identity.json`, run `scripts/make-manifest.sh`.
 
 ---
 

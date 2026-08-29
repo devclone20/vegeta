@@ -14,7 +14,7 @@ the agent. This repository is its **body**. Underneath the name **VEGETA** runs 
 ```bash
 bash scripts/setup.sh              # install the Hermes substrate (official installer, no sudo)
 hermes model                       # connect YOUR model key (BYOK)
-bash scripts/boot.sh               # boot VEGETA with its soul + skills (trusts this project, then `hermes chat`)
+bash scripts/boot.sh               # soul rides in AGENTS.md; this trusts the project so its skills load, then `hermes chat`
 bash scripts/install-command.sh    # then type `vegeta` in the CLONE FRAME iT terminal
 ```
 
@@ -28,5 +28,6 @@ See [`AGENTS.md`](AGENTS.md). Concept: [`docs/INFT_CONCEPT.md`](docs/INFT_CONCEP
 
 ## Security & privacy
 Public repo: no secrets/keys/PII committed. Your model key is typed into your own terminal
-(`hermes model`), never handed to any assistant. The owner profile is folded into
-`SOUL.md` **locally** and untracked (`scripts/personalize.sh --apply-owner`).
+(`hermes model`), never handed to any assistant. The owner profile goes into the gitignored
+`AGENTS.override.md` — which Hermes loads in place of `AGENTS.md`, so it reaches the agent
+but is never committed (`scripts/personalize.sh --apply-owner`).
