@@ -1,6 +1,6 @@
 {
   "manifest_version": 1,
-  "generated": "2026-08-29T22:52:30Z",
+  "generated": "2026-08-29T23:14:36Z",
   "algorithm": "sha256",
   "repo": "https://github.com/devclone20/inft-i01",
   "note": "Authoritative hashes for a token live on-chain / Irys, not here (see docs/BOOTSTRAP.md). This file is a convenience mirror of the tracked tree. Symlinks are hashed by their target path (what git stores), not by the bytes they point at.",
@@ -37,7 +37,7 @@
     "package.json": "35be138a5e758798aea924fb1e68638c8ada1e5eedeba6aa8327d5d7588238a0",
     "scripts/boot.sh": "40534352eaa625e463afefbeeb1ee71dbbcd4a984a897832bed10a8f3a0e4786",
     "scripts/install-command.sh": "df1591f7304d2a43274ec7189d5f454f9d3016d9bbb4e8c20b7b335e1418c06d",
-    "scripts/make-manifest.sh": "83dbb0727b3f78e1dfa57053169b0dc3954b9b983e86cb35de656fbdd3de7ed7",
+    "scripts/make-manifest.sh": "3b3b2234623ef6f5c58300fd427eb0b77be070d91855749a852cd8ce5a083c21",
     "scripts/personalize.sh": "36e4a443793bb245197c199560b747aea5cbe97115490ea6b58e81c5dd89d987",
     "scripts/setup.sh": "722392e6bbc0faf83b7642e5cc6992ff787de9013d21807ba282a58fdfa0dbdf",
     "skills/README.md": "dd741a62022c32cca44c1324b9d89dc668b5fa841a474cb6665f8bcc1198b52c",

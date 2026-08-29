@@ -14,7 +14,16 @@ else
   FILES=$(find . -type f -not -path './.git/*' -not -path './node_modules/*' -not -name manifest.json | sed 's|^\./||' | sort)
 fi
 
-hash_of() { shasum -a 256 "$1" | awk '{print $1}'; }
+hash_of() {
+  # A tracked symlink (.hermes/skills -> ../skills) is content in git too: what
+  # git stores is the LINK TARGET, not the tree behind it. Hash that string so
+  # repointing the link shows up as a manifest mismatch like any other edit.
+  if [ -L "$1" ]; then
+    printf 'symlink:%s' "$(readlink "$1")" | shasum -a 256 | awk '{print $1}'
+  else
+    shasum -a 256 "$1" | awk '{print $1}'
+  fi
+}
 # A tracked symlink has no file bytes of its own — git stores its TARGET PATH, and that is
 # what we hash, so .hermes/skills (the project-skills link) is covered like everything else.
 # A verifier reproduces it with: printf '%s' "$(readlink <path>)" | shasum -a 256
