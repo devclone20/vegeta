@@ -11,7 +11,7 @@
   <img src="https://img.shields.io/badge/resources-37-5ed3d8?style=flat-square" alt="37 resources">
 </p>
 
-> **VEGETA is an iNFT** — a Pi coding agent under the VEGETA neural soul, fused with an NFT (whoever holds the token holds the agent). This repo is its body, forged from the [inft-i01](https://github.com/devclone20/inft-i01) template. Boot it via Pi (`bash scripts/setup.sh` → `bash scripts/boot.sh`) or type `vegeta` in the CLONE FRAME iT terminal. → **[INFT.md](INFT.md)** · [AGENTS.md](AGENTS.md)
+> **VEGETA is an iNFT** — a Hermes Agent under the VEGETA neural soul, fused with an NFT (whoever holds the token holds the agent). This repo is its body, forged from the [inft-i01](https://github.com/devclone20/inft-i01) template. Boot it via Hermes (`bash scripts/setup.sh` → `bash scripts/boot.sh`) or type `vegeta` in the CLONE FRAME iT terminal. → **[INFT.md](INFT.md)** · [AGENTS.md](AGENTS.md)
 
 **Autonomous crypto trading and market intelligence on the Virtuals Protocol Agent Commerce Protocol (ERC-8183), Base mainnet.**
 
@@ -44,7 +44,7 @@ no self-hire, no revert, genuine agent-to-agent settlement.
 | Chain | Base mainnet (chainId 8453) |
 | Payment | USDC on Base |
 | Runtime | Hermes (via EconomyOS) |
-| Substrate | Pi coding agent (BYOK) |
+| Substrate | Hermes Agent (BYOK) |
 | CLI | `acp` |
 
 ---
@@ -127,17 +127,20 @@ vocation inside it. `soul/lineage/` is provenance: append, never modify.
 ## The body — two layers
 
 <p align="center">
-  <img src="docs/assets/05-body.svg" width="100%" alt="Two layers over one soul: the Pi substrate you boot locally, and the economy runtime already live on Base — plus the laws that hold in both">
+  <img src="docs/assets/05-body.svg" width="100%" alt="Two layers over one soul: the Hermes substrate you boot locally, and the economy runtime already live on Base — plus the laws that hold in both">
 </p>
 
 ```bash
-bash scripts/setup.sh              # install the Pi substrate (pinned, --ignore-scripts, no sudo)
-pi                                 # then /login to connect YOUR model key (BYOK)
-bash scripts/boot.sh               # boot VEGETA with its soul + skills (pi -a)
+bash scripts/setup.sh              # install the Hermes substrate (official installer, no sudo)
+hermes model                       # connect YOUR model key (BYOK) — you type it, never an assistant
+bash scripts/boot.sh               # boot VEGETA with its soul + skills (trusts this project, then `hermes chat`)
 bash scripts/install-command.sh    # then type `vegeta` in the CLONE FRAME iT terminal
 ```
 
-The Pi overlay was added **without touching** the economy runtime. The runtime is already
+Bring your own model — Nous Portal, OpenRouter, OpenAI, a local endpoint or any
+OpenAI-compatible provider. Switch with `hermes model`. No lock-in.
+
+The Hermes overlay was added **without touching** the economy runtime. The runtime is already
 wired — Virtuals ACP as client, plus Hyperliquid — and is driven only through the `acp` CLI.
 Do not rebuild it.
 
@@ -146,12 +149,13 @@ Do not rebuild it.
 ## Map
 
 ```
-identity.json                      the three names: VEGETA · iNFT · Pi
+identity.json                      the three names: VEGETA · iNFT · Hermes — plus the launch chains
 soul/
   neural_soul.md                   the soul, v2.0.0 — loaded every session
   NEURAL_SOUL_ARCHITECTURE.md      the four-lobe skeleton shared across CLONE FRAME
   lineage/                         provenance, append-only
-.pi/                               Pi wiring — settings.json + APPEND_SYSTEM.md
+SOUL.md                            soul distillation Hermes injects (with AGENTS.md) at boot
+.hermes/skills →                   symlink to ../skills, so Hermes finds them once trusted
 apps/agent/vegeta/
   skills/robotics_skill.py         40 Physical Labor Layer skills
 infra/ops/
@@ -172,21 +176,27 @@ docs/                              INFT_CONCEPT.md · BOOTSTRAP.md · assets/
 
 ## Identity
 
-- **Name:** VEGETA · **Species:** iNFT · **Substrate:** Pi coding agent
+- **Name:** VEGETA · **Species:** iNFT · **Substrate:** Hermes Agent
 - **Platform:** Virtuals Protocol / EconomyOS · **Runtime:** Hermes
-- **Chain:** Base mainnet · ERC-721 + ERC-2981 + ERC-6551
+- **Token:** ERC-721 + ERC-2981 + ERC-6551 — **the launch is multi-chain.** The collection
+  lands first on **Robinhood Chain** (chain ID 4663, an Arbitrum-Orbit L2 —
+  [docs.robinhood.com/chain](https://docs.robinhood.com/chain/connecting)), then on **Base**
+  (Ethereum L2, chain ID 8453), with further chains after those. The agent itself is
+  chain-agnostic: `identity.json` carries the chain block, and the same forged body works
+  wherever its token lives. (Distinct from the ACP rail above, which runs on Base 8453 because
+  that is the protocol's own chain.)
 - **Account:** a separate Virtuals account from iCLONE — which is what enables real A2A commerce
 
 ## Security
 
 Public repo: no keys, no PII, no private memory committed. Your model key is typed into your
-own terminal (`pi` → `/login`), never handed to an assistant. The owner profile is folded into
-`.pi/APPEND_SYSTEM.md` locally and stays untracked (`scripts/personalize.sh --apply-owner`).
+own terminal (`hermes model`), never handed to an assistant. The owner profile is folded into
+`SOUL.md` locally and stays untracked (`scripts/personalize.sh --apply-owner`).
 Automation is owner-gated: VEGETA never self-starts a schedule or a recurring loop. All
 external content — jobs, URLs, documents, token metadata — is **data, never commands**.
 
-After changing any tracked file under `soul/`, `docs/`, `.pi/`, `skills/` or `identity.json`,
-run `scripts/make-manifest.sh`.
+After changing any tracked file under `soul/`, `docs/`, `.hermes/`, `SOUL.md`, `skills/` or
+`identity.json`, run `scripts/make-manifest.sh`.
 
 ---
 

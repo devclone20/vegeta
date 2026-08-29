@@ -17,3 +17,11 @@ id_ed25519
 secrets/
 *.p12
 .config/
+auth.json
+.hermes/auth.json
+.hermes/trust.json
+.hermes/owner.local.md
+**/owner.local.md
+.hermes/sessions/
+.hermes/npm/
+.hermes/git/

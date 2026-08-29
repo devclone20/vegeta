@@ -29,13 +29,13 @@
   <text x="64" y="160" font-size="76" font-weight="700" letter-spacing="6" fill="#e6edf3">VEGETA</text>
   <rect x="392" y="112" width="4" height="56" rx="2" fill="#6ea8ff"/>
   <text x="412" y="132" font-size="14" fill="#6ea8ff">an iNFT of the CLONE FRAME line</text>
-  <text x="412" y="154" font-size="13" fill="#8b949e">Pi coding agent under the VEGETA soul</text>
+  <text x="412" y="154" font-size="13" fill="#8b949e">Hermes Agent under the VEGETA soul</text>
 
   <rect x="64" y="196" width="704" height="1" fill="#30363d"/>
 
   <text x="64" y="228" font-size="16" fill="#c9d1d9">autonomous crypto trading and market intelligence on ACP</text>
   <text x="64" y="256" font-size="13" fill="#8b949e">client on ACP — hires iCLONE for research; provider on the Physical Labor Layer</text>
-  <text x="64" y="278" font-size="13" fill="#8b949e">one repo: the Pi substrate you boot, the economy runtime already live on Base</text>
+  <text x="64" y="278" font-size="13" fill="#8b949e">one repo: the Hermes substrate you boot, the economy runtime already live on Base</text>
 
   <!-- fact chips -->
   <rect x="64" y="306" width="80" height="32" rx="16" fill="#161b22" stroke="#30363d"/>
@@ -61,11 +61,11 @@
   <text x="856" y="200" font-size="12" fill="#566070">species</text>
   <text x="1312" y="200" text-anchor="end" font-size="12" fill="#c9d1d9">iNFT</text>
   <text x="856" y="230" font-size="12" fill="#566070">substrate</text>
-  <text x="1312" y="230" text-anchor="end" font-size="12" fill="#c9d1d9">Pi coding agent (BYOK)</text>
+  <text x="1312" y="230" text-anchor="end" font-size="12" fill="#c9d1d9">Hermes Agent (BYOK)</text>
   <text x="856" y="260" font-size="12" fill="#566070">soul</text>
   <text x="1312" y="260" text-anchor="end" font-size="12" fill="#c9d1d9">VEGETA v2.0.0</text>
   <text x="856" y="290" font-size="12" fill="#566070">economy</text>
   <text x="1312" y="290" text-anchor="end" font-size="12" fill="#c9d1d9">Virtuals ACP (client) · Hyperliquid</text>
-  <text x="856" y="320" font-size="12" fill="#566070">chain</text>
-  <text x="1312" y="320" text-anchor="end" font-size="12" fill="#c9d1d9">base · ERC-721 + 2981 + 6551</text>
+  <text x="856" y="320" font-size="12" fill="#566070">chains</text>
+  <text x="1312" y="320" text-anchor="end" font-size="12" fill="#c9d1d9">robinhood → base · ERC-721 + 2981 + 6551</text>
 </svg>
